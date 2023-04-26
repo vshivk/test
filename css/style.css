@@ -21,7 +21,7 @@ button {
     background-color: #34b4eb;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 2px;
     cursor: pointer;
 }
 
@@ -29,25 +29,45 @@ button:hover {
     background-color: #1c8ac9;
 }
 
-table {
-    margin: 20px auto;
-    border-collapse: collapse;
-    border: 2px solid #ddd;
+.table {
+    border: 1px solid #ddd;
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    table-layout: fixed;
 }
 
-table td, table th {
+.table td, .table th {
     padding: 10px;
     border: 1px solid #ddd;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-th {
+.table-wrapper {
+    overflow-y: auto;
+    max-height: 400px;
+}
+
+.table th {
     background-color: #f5f5f5;
     font-size: 18px;
     text-align: left;
 }
 
-#no-data {
-    display: none;
+.no-data {
     font-size: 24px;
     font-weight: bold;
+}
+
+.not-visible{
+    display: none;
+}
+
+.table-thead{
+    position: sticky;
+    top: 0;
+}
+.table-thead th{
+    cursor: pointer;
 }

@@ -8,13 +8,15 @@
 <body>
 <main>
     <div class="container">
-        <h1>Загрузка данных через API</h1>
-        <button id="load-btn">Загрузить данные</button>
-        <button id="clear-btn">Очистить данные</button>
-        <table id="table"></table>
-        <div id="no-data">Нет данных для отображения</div>
+        <button class="load-btn">Load data</button>
+        <button class="clear-btn">Clear data</button>
+        <div class="table-wrapper">
+            <p class="loader not-visible">Loading...</p>
+            <table class="table"></table>
+            <div class="no-data not-visible">No data available.</div>
+        </div>
     </div>
 </main>
-<script src="js/main.js"></script>
+<script type="module" src="js/index.js"></script>
 </body>
 </html>
